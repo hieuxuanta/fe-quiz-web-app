@@ -1,0 +1,140 @@
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+@font-face{
+    font-family: KodchasanRegular;
+    src: url('../fonts/Kodchasan-Regular.ttf');
+}
+
+body{
+    
+    /* background: url(../images/bg-forest.jpg) no-repeat;
+    background-size: cover; */
+    /* filter: brightness(0.5); */
+    background-color: #ccc;
+    font-family: KodchasanRegular;
+    font-size: 20px;
+    z-index: -1;
+}
+
+input, textarea, button{
+    font-family: KodchasanRegular;
+    font-size: 20px;
+}
+
+.container {
+    position: relative;
+    margin-top:100px;
+    text-align: -webkit-center;
+    z-index: 10;
+}
+
+/* .transparent-bg{
+    position: absolute;
+    background-color: rgba(0,0,0,0.5);
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index:1;
+} */
+
+img.bg-absolute{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter: brightness(0.8);
+}
+
+.container h1{
+    margin: 0 0 20px;
+    
+}
+
+.container .container_1 {
+    /* display: inline-block; */
+    background: url('../images/bg-light.jpg');
+    background-size: cover;
+    /* border: 1px solid #333; */
+    border-radius: 10px;
+    font-size: 1.5rem;
+    width: 850px;
+    min-height: 400px;
+    text-align: left;
+    padding: 25px;
+    margin-bottom: 10px;
+    box-shadow: 0 0 95px 15px #ccc;
+}
+
+.answer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.lbl-wrapper{
+    display: inline-block;
+    width: 48.75%;
+}
+
+.lblA, .lblB, .lblC, .lblD{
+    /* display: inline-block; */
+    width: 100%;
+    border-radius: 10px;
+    padding: 10px;
+    margin:20px 0 0;
+    background-color: #45C3F5;
+    transition: background-color ease-in-out 0.2s;
+}
+.lblA:hover, .lblB:hover, .lblC:hover, .lblD:hover{
+    background-color: lightblue;
+    cursor: pointer;
+}
+
+input[value]{
+    display: none;
+}
+
+input[value]:checked + .lblA, input[value]:checked + .lblB, input[value]:checked + .lblC, input[value]:checked + .lblD{
+    background-color: #FFB047;
+}
+
+#previousBtn, #nextBtn{
+    border: none;
+    background: transparent;
+    outline: none;
+    
+}
+#submitBtn{
+    outline: none;
+    border: none;
+    background-color: #47FF6C;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 0 0 10px;
+}
+button:hover{
+    cursor: pointer;
+}
+.fas{
+    font-size: 5rem;
+    color: #47FF6C;
+    margin:0 10px 0;
+    
+}
+.fas:hover{
+    color: brown;
+}
+
+.display_inlineBlock{
+    display: inline-block;
+}
+.display_none {
+    display: none;
+}
