@@ -6,15 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
     <title>Binzigo Online Quiz</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+        crossorigin="anonymous" />
     <script type="text/javascript" src="./js/myQuestionsList.js"></script>
 </head>
 
 <body>
     <div class="container">
+        <h1>Online Quiz App</h1>
         <form name="OnlineQuiz" id="onlineQuizFormId">
-            <h1>Online Quiz App</h1>
+
             <div class="questionBlockClass">
+
                 <!-- test-layout -->
                 <!-- <div class="container_1" id="question_1">
                     <label for="${indexQues - 1}" class="question">
@@ -29,25 +33,31 @@
                 </div> -->
                 <!-- end-test-layout -->
             </div>
-            <!-- <button id="previousBtn" class="display_none">Previous Question</button> -->
-            <button id="previousBtn" class="display_none">
-                <i class="fas fa-caret-left"></i>
-            </button>
-            <!-- <button id="nextBtn">Next Question</button> -->
-            <button id="nextBtn">
-                <i class="fas fa-caret-right"></i>
-            </button>
-            <br>
-            <button id="submitBtn" class="display_none">Submit Quiz</button>
-            <!-- <button id="playAgainBtn" class="display_none">Play again</button> -->
-            <br>
-            <label id="score">
-                <label class="currentQues_lbl"></label> out of <label id="totalQues_lbl"></label>
-            </label>
+            <div class="buttonBlockClass">
+                <!-- <button id="previousBtn" class="display_none">Previous Question</button> -->
+                <button id="previousBtn" class="display_none">
+                    <i class="fas fa-caret-left"></i>
+                </button>
+                <!-- <button id="nextBtn">Next Question</button> -->
+                <button id="nextBtn">
+                    <i class="fas fa-caret-right"></i>
+                </button>
+                <br>
+                <button id="submitBtn" class="display_none">Submit Quiz</button>
+                <button id="playAgainBtn" class="display_none">Play again</button>
+                <br>
+                <div class="quiz_info">
+
+                    <label id="score">
+                        <label class="currentQues_lbl"></label> out of <label id="totalQues_lbl"></label>
+                    </label>
+
+                </div>
+            </div>
         </form>
     </div>
     <!-- <div class="transparent-bg"></div> -->
-    <img class="bg-absolute" src="./images/bg-gradient-2.png" alt="">
+    <img class="bg-absolute" src="./images/bg-gradient-2.png" alt="" title="Go do quiz app boiz :)">
     <!-- <script defer src="jsFile.js">//todo load file using defer -->
     <script src="./js/main.js"></script>
 </body>
