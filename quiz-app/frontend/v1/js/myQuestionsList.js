@@ -32,15 +32,15 @@ const myQuestions = [{
         correctAnswer: 'c'
     },
     {
-        question: 'Which built-in method returns the index within the calling String object of the first occurrence of the specified value?',
+        question: 'Which of the following are capabilities of functions in JavaScript?',
         answers: {
-            a: 'A. getIndex()',
-            b: 'B. location()',
-            c: 'C. indexOf()',
-            d: 'D. getLocation()'
+            a: 'A. Return a value',
+            b: 'B. Accept an argument',
+            c: 'C. Accept parameters',
+            d: 'D. None of the above'
         },
         multi: false,
-        correctAnswer: 'd'
+        correctAnswer: 'c'
     },
     {
         question: 'Which the index within the calling String object of the first occurrence of the specified value?',
@@ -54,15 +54,15 @@ const myQuestions = [{
         correctAnswer: 'a'
     },
     {
-        question: 'Which built-in method returns the object of the first occurrence of the specified value?',
+        question: 'Which of the following is not a valid JavaScript variable name?',
         answers: {
-            a: 'A. getIndex()',
-            b: 'B. location()',
-            c: 'C. indexOf()',
-            d: 'D. getLocation()'
+            a: 'A. 2names',
+            b: 'B. _first_and_last_names',
+            c: 'C. FirstAndLast',
+            d: 'D. None of the above'
         },
         multi: false,
-        correctAnswer: 'b'
+        correctAnswer: 'a'
     },
     {
         question: 'What the index within the calling String object of the first occurrence of the specified value?',
@@ -70,44 +70,44 @@ const myQuestions = [{
             a: 'A. getIndex()',
             b: 'B. location()',
             c: 'C. indexOf()',
-            d: 'D. getLocation()'
+            d: 'D. document.getLocation()'
         },
         multi: false,
         correctAnswer: 'a'
     },
-    // {
-    //     question: 'Where the first occurrence of the specified value?',
-    //     answers: {
-    //         a: 'getIndex()',
-    //         b: 'location()',
-    //         c: 'indexOf()',
-    //         d: 'getLocation()'
-    //     },
-    //     multi: false,
-    //     correctAnswer: 'd'
-    // },
-    // {
-    //     question: 'Which built-in method value?',
-    //     answers: {
-    //         a: 'getIndex()',
-    //         b: 'location()',
-    //         c: 'indexOf()',
-    //         d: 'getLocation()'
-    //     },
-    //     multi: false,
-    //     correctAnswer: 'c'
-    // },
-    // {
-    //     question: 'Who the calling String object of the first occurrence of the specified value?',
-    //     answers: {
-    //         a: 'getIndex()',
-    //         b: 'location()',
-    //         c: 'indexOf()',
-    //         d: 'getLocation()'
-    //     },
-    //     multi: false,
-    //     correctAnswer: 'b'
-    // },
+    {
+        question: 'What is the correct JavaScript syntax to write "Hello World"?',
+        answers: {
+            a: 'A. System.out.println("Hello World")',
+            b: 'B. println("Hello World") or printf("Hello World")',
+            c: 'C. document.write("Hello World")',
+            d: 'D. response.write("Hello World")'
+        },
+        multi: false,
+        correctAnswer: 'c'
+    },
+    {
+        question: 'Which of the following navigator object properties is the same in both   Netscape and IE?',
+        answers: {
+            a: 'A. navigator.appCodeName',
+            b: 'B. ClientSide()',
+            c: 'C. navigator.appVersion',
+            d: 'D. navigator.appName'
+        },
+        multi: false,
+        correctAnswer: 'a'
+    },
+    {
+        question: 'Choose the client-side JavaScript object?',
+        answers: {
+            a: 'A. Database',
+            b: 'B. Cursor',
+            c: 'C. Client',
+            d: 'D. FileUpLoad'
+        },
+        multi: false,
+        correctAnswer: 'd'
+    },
     // {
     //     question: 'How first occurrence of the specified value?',
     //     answers: {

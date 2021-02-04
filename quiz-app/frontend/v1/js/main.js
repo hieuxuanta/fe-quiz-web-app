@@ -5,15 +5,18 @@ let previousBtn;
 let nextBtn;
 let submitBtn;
 
-// let playAgainBtn; //TODO: finish btn play again
+let playAgainBtn = document.getElementById("playAgainBtn");
 
 let questionContent;
 let questionBlockClass;
 let allAnswers;
 let scoreLbl;
+let score = 0;
 const hideQuestionClass = "display_none";
-const showQuestionClass = "display_inlineBlock";
 document.onload = initPage();
+
+//Read the rules before doing the quiz
+alert("You have to answer the question one-by-one before moving to the others.\nIf the answer is clear, the score of this answer will be 0\nReady?");
 
 function initPage() {
   previousBtn = document.getElementById("previousBtn");
@@ -39,8 +42,9 @@ function initPage() {
   nextBtn.addEventListener("click", clickNextBtn);
   previousBtn.addEventListener("click", clickPreviousBtn);
   submitBtn.addEventListener("click", clickSubmitBtn);
-  // playAgainBtn.addEventListener("click", clickPlayAgainBtn);
   
+  
+
 }
 
 //Calculate score and show score on screen
@@ -48,7 +52,7 @@ function clickSubmitBtn(e) {
   e.preventDefault();
   let userAnswersList = [];
   for (var i = 0; i < totalQues; i++) {
-    let question = document.querySelector(`input[name="${i}"]:checked`);
+    // let question = document.querySelector(`input[name="${i}"]:checked`);
     let userAnswers;
     if (question != null) {
       userAnswers = {
@@ -65,28 +69,31 @@ function clickSubmitBtn(e) {
   }
 
   //Calculate score
-  let score = 0;
+
   for (var j = 0; j < totalQues; j++) {
     if (userAnswersList[j].answer === myQuestions[j].correctAnswer) {
       ++score;
     }
   }
-  scoreLbl.innerHTML = `You get ${score}/${totalQues} correct answer(s)`;
+  // console.log(score);
+  scoreLbl.innerHTML = `You got ${score}/${totalQues} correct answer(s)`;
   previousBtn.setAttribute("disabled", "disabled");
   submitBtn.setAttribute("disabled", "disabled");
   if(score >= 7){
-    alert(`Your score is ${score}. Good job!`);
+    alert(`Your score : ${score*100}. Good job!`);
   }else{
-    alert(`Your score is ${score}. Learn more bro :)`);
+    alert(`Your score : ${score*100}. Learn more bro :)`);
   }
-  
-}
+  playAgainBtn.removeAttribute("class");
+  playAgainBtn.addEventListener("click", clickPlayAgainBtn);
+  function clickPlayAgainBtn(e){
+    e.preventDefault();
+    location.reload();
+    // initPage(); 
+  }
 
-function clickPlayAgainBtn(e){
-  e.preventDefault();
-
-  initPage();
 }
+// console.log(score);
 
 //Get question content base on current question index
 // function getQuestionContent() {
@@ -136,6 +143,12 @@ function getAllQuestionContent() {
     // }</label><br>
     //                                     </div>`;
     let single_question = `<div class="container_1 ${hideQuestionClass}" id="question_${i}">
+                            <!--<div>
+                            <label id="score">
+                              <label class="currentQues_lbl"></label> out of <label id="totalQues_lbl">${totalQues}</label>
+                              <h2>Score - ${score}</h2>
+                            </label>
+                            </div>-->
                             <label for="${indexQues - 1}" class="question">Question ${i + 1}: ${myQuestions[i].question}
                             </label><br>
                             <div class="answer">
@@ -191,7 +204,7 @@ function clickNextBtn(e) {
   if (indexQues == totalQues) {
     nextBtn.setAttribute("class", hideQuestionClass);
     submitBtn.removeAttribute("class");
-    // playAgainBtn.removeAttribute("class");
+    
   }
 
   displayTargetQuestion(indexQues - 1);
@@ -223,3 +236,6 @@ function setCurrentQuestion() {
     currentQues[i].innerHTML = indexQues;
   }
 }
+
+
+
