@@ -52,7 +52,7 @@ function clickSubmitBtn(e) {
   e.preventDefault();
   let userAnswersList = [];
   for (var i = 0; i < totalQues; i++) {
-    // let question = document.querySelector(`input[name="${i}"]:checked`);
+    let question = document.querySelector(`input[name="${i}"]:checked`);
     let userAnswers;
     if (question != null) {
       userAnswers = {
