@@ -11,9 +11,8 @@
 }
 
 body{
-    
-    /* background: url(../images/bg-forest.jpg) no-repeat;
-    background-size: cover; */
+    background: url(../images/bg-forest.jpg) no-repeat;
+    background-size: cover;
     /* filter: brightness(0.5); */
     background-color: #ccc;
     font-family: KodchasanRegular;
@@ -26,9 +25,13 @@ input, textarea, button{
     font-size: 20px;
 }
 
+#onlineQuizFormId{
+    position: relative;
+}
+
 .container {
     position: relative;
-    margin-top:100px;
+    margin-top:80px;
     text-align: -webkit-center;
     z-index: 10;
 }
@@ -54,22 +57,30 @@ img.bg-absolute{
 
 .container h1{
     margin: 0 0 20px;
-    
 }
 
-.container .container_1 {
-    /* display: inline-block; */
+.container .questionBlockClass {
     background: url('../images/bg-light.jpg');
     background-size: cover;
-    /* border: 1px solid #333; */
     border-radius: 10px;
     font-size: 1.5rem;
     width: 850px;
     min-height: 400px;
     text-align: left;
     padding: 25px;
-    margin-bottom: 10px;
+    /* padding: 150px 25px 25px; */
     box-shadow: 0 0 95px 15px #ccc;
+}
+
+.container .buttonBlockClass{
+    border: solid 3px rgb(236,239,246);
+    background-color: rgba(236,239,246,0.2);
+    border-top: none;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    width: 850px;
+    margin: -10px 0 30px;
+    padding: 20px;
 }
 
 .answer{
@@ -84,7 +95,6 @@ img.bg-absolute{
 }
 
 .lblA, .lblB, .lblC, .lblD{
-    /* display: inline-block; */
     width: 100%;
     border-radius: 10px;
     padding: 10px;
@@ -109,7 +119,6 @@ input[value]:checked + .lblA, input[value]:checked + .lblB, input[value]:checked
     border: none;
     background: transparent;
     outline: none;
-    
 }
 #submitBtn{
     outline: none;
@@ -119,6 +128,14 @@ input[value]:checked + .lblA, input[value]:checked + .lblB, input[value]:checked
     padding: 10px;
     margin: 0 0 10px;
 }
+#playAgainBtn{
+    outline: none;
+    border: solid 3px #47FF6C;
+    /* background-color: #47FF6C; */
+    border-radius: 10px;
+    padding: 8px;
+    margin: 0 0 10px;
+}
 button:hover{
     cursor: pointer;
 }
@@ -126,15 +143,24 @@ button:hover{
     font-size: 5rem;
     color: #47FF6C;
     margin:0 10px 0;
-    
 }
 .fas:hover{
     color: brown;
 }
 
-.display_inlineBlock{
-    display: inline-block;
+label#score{
+    font-size: 1.5rem;
 }
+
+/* .quiz_info{
+    position: absolute;
+    top:0;
+    left:50%;
+} */
+
+/* .display_inlineBlock{
+    display: inline-block;
+} */
 .display_none {
     display: none;
 }
