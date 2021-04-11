@@ -1,8 +1,7 @@
-# fe-quiz-web-app
-Quiz web application for only user's using
+# Fe-quiz-web-app
+<p>Quiz web application for only user's using</p>
 
---
-# full-quiz-web-app
-It will be released soon...
+# Full-quiz-web-app
+<i>It will be released soon...</i>
 
 
