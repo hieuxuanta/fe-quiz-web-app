@@ -1,5 +1,5 @@
-# js-quiz-web-app
-Quiz web application for user's and admin's using
+# fe-quiz-web-app
+Quiz web application for only user's using
 --
-TODO : Build an admin page <br/>
-DOING: Design layout, handle client side process <br/>
+# full-quiz-web-app
+It will be released soon...
